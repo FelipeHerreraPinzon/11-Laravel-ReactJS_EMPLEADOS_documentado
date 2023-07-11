@@ -17,6 +17,7 @@ const CrearEmpleado = () => {
         await axios.post(endpoint, {nombre: nombre, celular: celular, correo: correo}).then(({data})=>{
             Swal.fire({
               icon:"success",
+              title: '¡ Empleado Creado !',
               text:data.message
             })
             navigate("/")
@@ -44,6 +45,7 @@ const CrearEmpleado = () => {
                     onChange={ (e)=> setNombre(e.target.value)}
                     type='text'
                     className='form-control'
+                    placeholder='INGRESE NOMBRE DEL EMPLEADO'
                 />
             </div>
 
@@ -53,6 +55,8 @@ const CrearEmpleado = () => {
                     value={celular} 
                     onChange={ (e)=> setCelular(e.target.value)}
                     type='number'
+                    className='form-control'
+                    placeholder='INGRESE CELULAR DEL EMPLEADO'
                 />
             </div>
 
@@ -62,6 +66,8 @@ const CrearEmpleado = () => {
                     value={correo} 
                     onChange={ (e)=> setCorreo(e.target.value)}
                     type='text'
+                    className='form-control'
+                    placeholder='INGRESE CORREO DEL EMPLEADO'
                 />
             </div>
 

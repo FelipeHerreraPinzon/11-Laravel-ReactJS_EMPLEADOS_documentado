@@ -43,6 +43,7 @@ const MostrarEmpleados = () => {
      await axios.delete(`${endpoint}/empleado/${id}`).then(({data})=>{
        Swal.fire({
            icon:"success",
+           title: '¡ Empleado Eliminado !',
            text:data.message
        })
      getAllEmpleados()

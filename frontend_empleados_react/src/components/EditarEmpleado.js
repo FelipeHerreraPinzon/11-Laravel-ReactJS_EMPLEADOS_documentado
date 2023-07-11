@@ -25,6 +25,7 @@ const EditarEmpleado = () => {
         }).then(({data})=>{
             Swal.fire({
               icon:"success",
+              title: '¡ Empleado Actualizado !',
               text:data.message
             })
             navigate("/")
